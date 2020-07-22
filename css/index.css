@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    height: 75px;
+    background-color: #000;
+    color: #fff;
+}
+
+.header__row {
+    justify-content: space-between;
+}
+
+.header__link, .header__link_this {
+    margin-right: 20px;
+    color: #8c8c8c;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition-duration: 1s;
+}
+.header__link:hover, .header__link_this:hover {
+    transition-duration: 1s;
+    text-shadow: 0 0 5px #fff;
+    color: #fff;
+}
+.header__link_this {
+    color: #fff;
+}
+
+.header__location address a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-style: normal;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 800px;
+    }
+}
+@media (max-width: 800px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .header__link, .header__link_this {
+        color: #8c8c8c;
+        font-size: 10px;
+    }
+    .header__link:active, .header__link_this:active {
+        transition-duration: 1s;
+        text-shadow: 0 0 5px #fff;
+        color: #fff;
+    }
+    .header__link_this {
+        color: #fff;
+    }
+
+    .header__location address a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-style: normal;
+    }
+}
+.footer {
+    height: 350px;
+    background-color: #000;
+}
+
+.footer__container {
+    max-width: 750px;
+}
+
+.footer__row {
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.footer__form {
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+
+.footer__fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__subcribetext {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer__email {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: #fff;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 15px;
+}
+
+.footer__send {
+    width: 100%;
+    padding: 10px 0;
+    border: 2.5px solid burlywood;
+    background-color: #fff;
+    color: burlywood;
+    font-size: 15px;
+    transition-duration: 0.5s;
+    font-weight: 700;
+}
+.footer__send:hover {
+    transition-duration: 0.5s;
+    background-color: burlywood;
+    color: #fff;
+}
+
+.footer__followtext {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer__copyright {
+    color: #7c7c7c;
+    font-size: 12.5px;
+}
+
+.invite {
+    background-image: url("../images/index/19238.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.title {
+    font-size: 150px;
+    color: #000;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+}
+
+.title span {
+    font-size: 25px;
+}
+
+@media (max-width: 1024px) {
+    .invite {
+        height: 725px;
+    }
+
+    .invite__text h1 {
+        font-size: 100px;
+    }
+
+    .invite__text h1 span {
+        font-size: 20px;
+    }
+}
+.invite__scroll {
+    position: relative;
+    top: 80px;
+    animation-duration: 3s;
+    animation-name: scroll;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes scroll {
+    50% {
+        top: 110px;
+    }
+    100% {
+        top: 80px;
+    }
+}
+.invite__scroll img {
+    width: 50px;
+    height: 50px;
+}
+
+.menu {
+    padding: 100px 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+.menu__items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__title {
+    font-size: 32.5px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 75px;
+}
+
+.menu__recipes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu__recipe {
+    width: 300px;
+    transition-duration: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.menu__image {
+    width: 100%;
+}
+
+.menu__recname {
+    color: #000;
+    font-size: 22.5px;
+    margin-top: 25px;
+    font-weight: 700;
+}
+
+.menu__link {
+    display: block;
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    transition-duration: 1s;
+}
+.menu__link:hover {
+    transition-duration: 1s;
+    background-color: #7a7a7a;
+}
+
+.empty {
+    height: 700px;
+    background-image: url("../images/index/TepidVioletEgg-size_restricted.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.about {
+    background-color: #fff;
+}
+
+.about__info {
+    height: 500px;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about__image {
+    height: 100%;
+    display: block;
+}
+
+.about__category {
+    color: #000;
+    font-size: 30px;
+    margin-bottom: 15px;
+    word-spacing: 10px;
+    font-family: "Lobster", cursive;
+}
+
+.about__title {
+    color: #000;
+    font-size: 35px;
+    text-transform: lowercase;
+}
+
+.about__text {
+    color: #000;
+    letter-spacing: 2.5px;
+    font-size: 12.5px;
+    line-height: 20px;
+    padding: 10px 0;
+}
+
+.about__link {
+    font-size: 15px;
+    padding: 10px 30px;
+    color: #fff;
+    background-color: #000;
+    transition-duration: 1s;
+}
+.about__link:hover {
+    transition-duration: 1s;
+    background-color: #7a7a7a;
+}
+
+.coffee {
+    background-image: url("../images/index/Coffee-beans-cookies-cups_3840x2160.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .about__info {
+        height: 500px;
+    }
+
+    .about__image {
+        width: 400px;
+    }
+
+    .about__category {
+        font-size: 25px;
+    }
+
+    .about__title {
+        font-size: 25px;
+    }
+
+    .about__text {
+        font-size: 12.5px;
+    }
+}
+@media (max-width: 800px) {
+    .about__info {
+        height: 400px;
+    }
+
+    .about__image {
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    .about__info {
+        padding: 50px 0px;
+    }
+}
